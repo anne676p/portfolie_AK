@@ -5,6 +5,7 @@ body {
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 a {
@@ -14,14 +15,39 @@ a {
     font-size: 2rem;
 }
 
+h2 {
+    font-family: mr-eaves-xl-sans-narrow, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    padding: 8px;
+    line-height: 30px;
+
+}
+
+h4 {
+    font-family: mr-eaves-xl-modern, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 35rem;
+    line-height: 0.7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    opacity: 0.2;
+    color: #C6C2C2;
+}
+
+
 header {
     top: 1vw;
     left: 1vw;
     width: 100%;
     display: flex;
-    flex-direction:
-        justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+#forside_tal {}
 
 .logo {
     background-image: url(billeder/logo.svg);
@@ -48,16 +74,19 @@ header {
     border-color: black;
     min-width: 160px;
     right: 0;
+    z-index: 2;
 }
 
 .dropdown-content a {
     color: black;
+    position: relative;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+
 }
 
-ul {
+nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -65,7 +94,7 @@ ul {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #CCD1C7;
 }
 
 /* Show the dropdown menu on hover */
@@ -90,19 +119,87 @@ ul {
 
     .dropdown-content a:hover {
         background-color: #FCFCF9;
-        font-weight: 800;
+        color: #CCD1C7;
 
     }
 }
 
-.sectionwrapper {
-    background-color: bisque;
+#forside .sectionwrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCF9;
     width: 100vw;
-    height: 100vw;
+    height: 100%;
+    z-index: 1;
+}
+
+#forside .col {
+    width: 85vw;
+    align-self: center;
+}
+
+#text {
+    background-color: #CCD1C7;
 }
 
 #portraet_1 {
-    background-image: url(billeder/portreat.jpg);
-    height: 500vw;
-    width: 100vw;
+    display: flex;
+    position: relative;
+    text-align: center;
+}
+
+.velkommen {
+    position: absolute;
+    background-color: white;
+    bottom: 40px;
+    left: 23%;
+}
+
+#portraet_1 h1 {
+    font-family: mr-eaves-xl-modern, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    padding: 4px;
+    font-size: 3rem;
+    text-transform: uppercase;
+
+}
+
+@media only screen and (min-width: 600px) {
+    #forside .sectionwrapper {
+        flex-direction: row;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #forside .col {
+        display: flex;
+        flex-direction: column-reverse;
+        align-self: flex-start;
+        justify-content: space-between;
+
+    }
+
+    #portraet_1 {
+        width: 70vw;
+    }
+
+    #text {
+        position: relative;
+        background-color: #CCD1C7;
+        bottom: -0.4vw;
+        left: -2.8vw;
+        width: 90%;
+    }
+
+    .velkommen {
+        position: absolute;
+        background-color: white;
+        left: 60%;
+        bottom: 50%;
+
+    }
 }

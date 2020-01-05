@@ -152,8 +152,7 @@ nav {
 
 .text {
     background-color: #CCD1C7;
-    height: 40vh;
-    align-self: center;
+    align-self: flex-start;
 
 }
 
@@ -161,6 +160,9 @@ nav {
     display: flex;
     position: relative;
     text-align: center;
+    background-image: url(billeder/portreat.jpg);
+    background-size: cover;
+    height: 80vh;
 }
 
 .velkommen {
@@ -189,22 +191,10 @@ h1 {
         padding-right: 50px;
     }
 
-    #forside .col {
-        display: flex;
-        flex-direction: column-reverse;
-        align-self: flex-start;
-        justify-content: space-between;
-
-    }
 
     .portraet {
         width: 70vw;
         z-index: 1;
-    }
-
-    .portraet img {
-        position: relative;
-
     }
 
     .text {
@@ -212,14 +202,20 @@ h1 {
         background-color: #CCD1C7;
         width: 60vw;
         padding-left: 1vw;
+        top: 40vh;
     }
 
     .velkommen {
-        position: absolute;
+        position: relative;
         background-color: white;
-        left: 60%;
-        bottom: 50%;
+        height: 12vh;
+        top: 10vh;
+        left: 33vw;
 
+    }
+
+    #forside h1 {
+        font-size: 5rem;
     }
 }
 
@@ -229,6 +225,10 @@ h1 {
     flex-direction: column;
     background-color: #FCFCF9;
     z-index: 1;
+}
+
+.citat {
+    margin: 50px;
 }
 
 
@@ -319,7 +319,7 @@ h1 {
 #portfolie {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -328,6 +328,7 @@ h1 {
 #emne3,
 #emne4 {
     padding-bottom: 5vh;
+    flex-basis: 350px;
 }
 
 #emne1 .sectionwrapper {

@@ -58,7 +58,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 
@@ -204,7 +203,7 @@ h1 {
     .velkommen {
         position: relative;
         background-color: white;
-        height: 12vh;
+        height: 90px;
         top: 10vh;
         left: 33vw;
 
@@ -283,7 +282,6 @@ h1 {
     justify-content: space-around;
     background-color: #CCD1C7;
     height: 300vw;
-    width: 100%;
 }
 
 
@@ -335,8 +333,11 @@ h1 {
 #emne2,
 #emne3,
 #emne4 {
-    padding-bottom: 5vh;
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+    padding-bottom: 50px;
     flex-basis: 350px;
+    flex-grow: 1;
 }
 
 #portfolie .sectionwrapper {
@@ -348,8 +349,6 @@ h1 {
 
 #emne1 .sectionwrapper {
     background-color: #CCD1C7;
-
-
 }
 
 #emne2 .sectionwrapper {
@@ -388,9 +387,9 @@ h1 {
 
 
 .link {
+    padding-top: 10px;
     display: flex;
     position: relative;
-    z-index: 1;
 }
 
 .link a {

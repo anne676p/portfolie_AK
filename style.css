@@ -5,8 +5,8 @@ body {
 
 img {
     width: 100%;
-    height: 100%;
 }
+
 
 a {
     font-family: mr-eaves-xl-sans-narrow, sans-serif;
@@ -41,7 +41,7 @@ h4 {
     font-family: mr-eaves-xl-modern, sans-serif;
     font-weight: 800;
     font-style: normal;
-    font-size: 35rem;
+    font-size: 36rem;
     line-height: 0.7;
     margin: 0;
     padding: 0;
@@ -52,12 +52,12 @@ h4 {
 
 
 header {
-    top: 1vw;
-    left: 1vw;
     width: 100%;
+    height: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 
@@ -136,13 +136,12 @@ nav {
     }
 }
 
+
 #forside .sectionwrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     background-color: #FCFCF9;
-    width: 100vw;
-    height: 100%;
     z-index: 1;
 }
 
@@ -153,6 +152,9 @@ nav {
 
 .text {
     background-color: #CCD1C7;
+    height: 40vh;
+    align-self: center;
+
 }
 
 .portraet {
@@ -168,7 +170,7 @@ nav {
     left: 23%;
 }
 
-.portraet h1 {
+h1 {
     font-family: mr-eaves-xl-modern, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -197,14 +199,19 @@ nav {
 
     .portraet {
         width: 70vw;
+        z-index: 1;
+    }
+
+    .portraet img {
+        position: relative;
+
     }
 
     .text {
         position: relative;
         background-color: #CCD1C7;
-        bottom: -0.4vw;
-        left: -2.8vw;
-        width: 90%;
+        width: 60vw;
+        padding-left: 1vw;
     }
 
     .velkommen {
@@ -221,15 +228,9 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: #FCFCF9;
-    width: 100vw;
-    height: 100%;
     z-index: 1;
 }
 
-#om .col {
-    width: 85vw;
-    align-self: center;
-}
 
 @media only screen and (min-width: 600px) {
     #om .sectionwrapper {
@@ -239,14 +240,6 @@ nav {
         padding-right: 50px;
     }
 
-    #om .col {
-        display: flex;
-        flex-direction: column-reverse;
-        align-self: flex-start;
-        justify-content: space-between;
-
-    }
-
     #om .portraet {
         width: 70vw;
     }
@@ -254,11 +247,6 @@ nav {
     #om .text {
         position: relative;
         background-color: #CCD1C7;
-        bottom: 15vw;
-        left: -2.8vw;
-        width: 90%;
-        min-height: 25vw;
-        z-index: 1;
     }
 
     .cv {
@@ -267,21 +255,7 @@ nav {
         left: 5%;
         width: 90%;
     }
-
-    .vandmaerke {
-        position: relative;
-
-    }
 }
-
-.box {
-    position: relative;
-    align-self: center;
-    background-color: #7C7C7C;
-    height: 80vw;
-    width: 80vw;
-}
-
 
 #kontakt .sectionwrapper {
     display: flex;
@@ -291,7 +265,7 @@ nav {
     width: 100%;
 }
 
-#backgroundcolor {
+#kontakt .backgroundcolor {
     background-color: #CCD1C7;
     position: absolute;
     height: 300vw;
@@ -299,10 +273,12 @@ nav {
     top: 25vw;
 }
 
-#kontakt h4 {
-    font-size: 7.2rem;
-    text-transform: uppercase;
-
+#kontakt .box {
+    position: relative;
+    align-self: center;
+    background-color: #7C7C7C;
+    height: 80vw;
+    width: 80vw;
 }
 
 @media only screen and (min-width: 600px) {
@@ -319,7 +295,7 @@ nav {
         width: 100%;
     }
 
-    #backgroundcolor {
+    #kontakt .backgroundcolor {
         background-color: #CCD1C7;
         position: absolute;
         top: 20vw;
@@ -337,5 +313,126 @@ nav {
         font-size: 20rem;
         text-transform: uppercase;
 
+    }
+}
+
+#portfolie {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#emne1,
+#emne2,
+#emne3,
+#emne4 {
+    padding-bottom: 5vh;
+}
+
+#emne1 .sectionwrapper {
+    background-color: #CCD1C7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+#emne2 .sectionwrapper {
+    background-color: #C7D1D0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#emne3 .sectionwrapper {
+    background-color: #CFC7D1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#emne4 .sectionwrapper {
+    background-color: #D1C7C7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sectionwrapper .box {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #7C7C7C;
+    height: 80vw;
+    width: 80vw;
+
+}
+
+.box .overskrift {
+    position: relative;
+    background-color: white;
+
+}
+
+#portfolie .emnebe {
+    position: relative;
+    align-self: flex-end;
+}
+
+
+.link {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.link a {
+    color: #A00F0F;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.linkbar {
+    height: 3vw;
+    width: 20vw;
+    background-color: #A00F0F;
+    align-self: center;
+}
+
+#portfolie h1 {
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+    #portfolie {
+        flex-direction: row;
+
+    }
+
+    #portfolie .box {
+        height: 20vw;
+        width: 20vw;
+
+    }
+
+    .linkbar {
+        width: 5vw;
+        height: 1vh;
+    }
+
+    #portfolie .overskrift {
+        background-color: #FCFCF9;
+        width: 20vw;
+        left: 0;
+        bottom: -8vh;
+    }
+
+    #portfolie .emnebe {
+        margin-top: 10vh;
     }
 }

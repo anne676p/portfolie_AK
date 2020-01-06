@@ -286,18 +286,64 @@ h1 {
 
 
 #kontakt .box {
+    background-color: white;
     position: relative;
     align-self: center;
-    background-color: #7C7C7C;
+}
+
+.overlay {
+    position: relative;
+    background-color: black;
+    opacity: 0.9;
     height: 80vw;
     width: 80vw;
+    text-align: center;
+    color: white;
 }
+
+.kontaktinfo {
+    position: relative;
+    top: 30vw;
+    line-height: 0.1;
+}
+
+.kontaktinfo h2 {
+    font-size: 2rem;
+}
+
+.hide {
+    display: none;
+}
+
+#telefon {
+    background-image: url(billeder/telefon.svg);
+}
+
+#email {
+    background-image: url(billeder/mail.svg);
+}
+
+#adresse {
+    background-image: url(billeder/adresse.svg);
+}
+
 
 @media only screen and (min-width: 600px) {
     #kontakt .box {
         height: 25vw;
         width: 25vw;
     }
+
+    .overlay {
+        height: 25vw;
+        width: 25vw;
+    }
+
+    .kontaktinfo {
+        position: relative;
+        top: 9.5vw;
+    }
+
 
     #kontakt .sectionwrapper {
         display: flex;

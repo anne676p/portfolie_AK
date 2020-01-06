@@ -64,8 +64,8 @@ header {
 .logo {
     background-image: url(billeder/logo.svg);
     position: relative;
-    height: 77px;
-    width: 400px;
+    height: 14vw;
+    width: 70vw;
 }
 
 .dropdownbtn {
@@ -99,7 +99,6 @@ header {
 
 }
 
-
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #CCD1C7;
@@ -129,6 +128,11 @@ header {
         background-color: #FCFCF9;
         color: #CCD1C7;
 
+    }
+
+    .logo {
+        height: 8vw;
+        width: 40vw;
     }
 }
 

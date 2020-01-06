@@ -68,60 +68,50 @@ header {
     width: 70vw;
 }
 
-.dropdownbtn {
+.dropbtn {
     background-color: #FCFCF9;
     color: black;
     font-size: 50px;
     border: none;
+    cursor: pointer;
 }
 
-.dropdown {
-    display: inline-block;
-}
 
 .dropdown-content {
-    display: none;
-    position: absolute;
     background-color: #FCFCF9;
-    border-bottom-color: black;
-    border-color: black;
-    min-width: 160px;
-    right: 0;
-    z-index: 2;
+    display: none;
+    position: relative;
+    z-index: 1;
 }
 
 .dropdown-content a {
-    color: black;
-    position: relative;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-
+    color: black;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #CCD1C7;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
+.show {
     display: block;
 }
 
 @media only screen and (min-width: 600px) {
-    .dropdownbtn {
+    .dropbtn {
         display: none;
     }
 
     .dropdown-content {
         display: flex;
-        display: block;
     }
 
-    nav {
-        display: flex;
-        padding: 2vw;
+    .dropdown-content a {
+        padding: 45px 40px;
+        text-decoration: none;
+        display: block;
     }
 
     .dropdown-content a:hover {
@@ -131,8 +121,8 @@ header {
     }
 
     .logo {
-        height: 8vw;
-        width: 40vw;
+        height: 80px;
+        width: 400px;
     }
 }
 
@@ -142,7 +132,6 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #FCFCF9;
-    z-index: 1;
 }
 
 #forside .col {
@@ -223,7 +212,6 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: #FCFCF9;
-    z-index: 1;
 }
 
 #om .col {

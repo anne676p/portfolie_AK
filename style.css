@@ -444,7 +444,7 @@ h1 {
 }
 
 .link a {
-    color: #A00F0F;
+    color: black;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -452,7 +452,7 @@ h1 {
 .linkbar {
     height: 3vw;
     width: 20vw;
-    background-color: #A00F0F;
+    background-color: black;
     align-self: center;
 }
 
@@ -491,3 +491,73 @@ h1 {
         overflow: scroll;
     }
 }
+
+
+#grundlaggendeweb .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #CCD1C7;
+}
+
+#grundlaggendeweb h1 {
+    background-color: white;
+}
+
+#grundlaggendeweb h1 {
+    font-size: 2rem;
+}
+
+#grundlaggendeweb .col1 {
+    margin-top: 5vw;
+}
+
+#grundlaggendeweb .col2 {
+    width: 80vw;
+    margin-top: 5vw;
+}
+
+#grundlaggendeweb h2 {
+    font-size: 1.2rem;
+}
+
+.col2 .top {
+    height: 70vw;
+    width: 80vw;
+    background-image: url(billeder/grundlaggendeweb_pic.jpg);
+    background-size: cover;
+}
+
+.col2 .bottom {
+    height: 10vw;
+    width: 80vw;
+}
+
+@media only screen and (min-width: 600px) {
+
+
+    #grundlaggendeweb .sectionwrapper {
+        justify-content: space-around;
+
+    }
+
+    #grundlaggendeweb .col1 {
+        width: 40vw;
+    }
+
+    #grundlaggendeweb .col2 {
+        height: 30vw;
+        width: 35vw;
+
+    }
+
+    .col2 .top {
+        height: 35vw;
+        width: 35vw;
+    }
+
+    .col2 .bottom {
+        height: 5vw;
+        width: 35vw;
+    }

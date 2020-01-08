@@ -10,12 +10,13 @@ img {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 15vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #FCFCF9;
+    z-index: 1;
 }
-
 
 .logo {
     background-image: url(billeder/logo.svg);
@@ -30,6 +31,8 @@ a {
     font-weight: 700;
     font-style: normal;
     font-size: 2rem;
+    text-decoration: none;
+    color: black;
 }
 
 h1 {
@@ -38,9 +41,8 @@ h1 {
     font-style: normal;
     margin: 0;
     padding: 4px;
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
-
 }
 
 h2 {
@@ -50,7 +52,6 @@ h2 {
     padding: 8px;
     line-height: 40px;
     letter-spacing: 0.8px;
-
 }
 
 h3 {
@@ -58,7 +59,7 @@ h3 {
     font-weight: 800;
     font-style: normal;
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -74,7 +75,6 @@ h3 {
     cursor: pointer;
 }
 
-
 .dropdown-content {
     background-color: #FCFCF9;
     display: none;
@@ -84,9 +84,7 @@ h3 {
 
 .dropdown-content a {
     padding: 12px 16px;
-    text-decoration: none;
     display: block;
-    color: black;
 }
 
 .dropdown-content a:hover {
@@ -97,7 +95,18 @@ h3 {
     display: block;
 }
 
+.sectionwrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: #FCFCF9;
+}
+
 @media only screen and (min-width: 600px) {
+    header {
+        position: relative;
+        height: 20vw;
+    }
+
     .dropbtn {
         display: none;
     }
@@ -108,135 +117,70 @@ h3 {
 
     .dropdown-content a {
         padding: 45px 40px;
-        text-decoration: none;
         display: block;
     }
 
     .dropdown-content a:hover {
         background-color: #FCFCF9;
         color: #CCD1C7;
-
     }
 
     .logo {
-        height: 40px;
-        width: 200px;
+        height: 60px;
+        width: 300px;
         top: 3vw;
         left: 3vw;
     }
 }
 
-
-#forside .sectionwrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #FCFCF9;
-}
-
-#forside .col {
+.col {
     width: 85vw;
     align-self: center;
 }
 
-#forside .text {
+.text {
     background-color: #CCD1C7;
     align-self: center;
-
 }
 
-#forside .portraet {
+.portraet {
     display: flex;
     position: relative;
-    text-align: center;
     background-image: url(billeder/portreat.jpg);
     background-size: cover;
     background-position: 50% 0%;
     height: 80vh;
-}
-
-@media only screen and (min-width: 600px) {
-    #forside .sectionwrapper {
-        flex-direction: row;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    #forside .portraet {
-        width: 70vw;
-    }
-
-    #forside .text {
-        background-color: #CCD1C7;
-        width: 60vw;
-        padding-left: 1vw;
-        top: 40vh;
-    }
-}
-
-#om .sectionwrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #FCFCF9;
-}
-
-#om .col {
-    width: 85vw;
-    align-self: center;
-}
-
-#om .text {
-    background-color: #CCD1C7;
-    align-self: flex-start;
-
-}
-
-#om .portraet {
-    display: flex;
-    position: relative;
-    text-align: center;
-    background-image: url(billeder/portreat.jpg);
-    background-size: cover;
-    height: 80vh;
-    background-position: 50% 0%;
 }
 
 .citat {
     margin: 50px;
 }
 
-
 @media only screen and (min-width: 600px) {
+
+    #forside .sectionwrapper,
     #om .sectionwrapper {
         flex-direction: row;
         padding-left: 50px;
         padding-right: 50px;
     }
 
-
-    #om .portraet {
+    .portraet {
         width: 70vw;
-        z-index: 1;
     }
 
-    #om .text {
+    .text {
         position: relative;
-        background-color: #CCD1C7;
         width: 60vw;
         padding-left: 1vw;
-
     }
 }
 
 #kontakt .sectionwrapper {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     background-color: #CCD1C7;
     height: 300vw;
 }
-
 
 #kontakt .box {
     background-color: white;
@@ -254,7 +198,6 @@ h3 {
     overflow: hidden;
 }
 
-
 .kontaktinfo {
     position: relative;
     top: 30vw;
@@ -264,7 +207,6 @@ h3 {
 .kontaktinfo h2 {
     font-size: 2rem;
 }
-
 
 #telefon {
     background-image: url(billeder/telefon.svg);
@@ -278,11 +220,12 @@ h3 {
     background-image: url(billeder/adresse.svg);
 }
 
-
 @media only screen and (min-width: 600px) {
-    #kontakt .box {
-        height: 25vw;
-        width: 25vw;
+    #kontakt .sectionwrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 40vw;
+        width: 100%;
     }
 
     .overlay {
@@ -292,14 +235,8 @@ h3 {
         width: 25vw;
     }
 
-    #adresse:hover .overlay {
-        display: block;
-    }
-
-    #email:hover .overlay {
-        display: block;
-    }
-
+    #adresse:hover .overlay,
+    #email:hover .overlay,
     #telefon:hover .overlay {
         display: block;
     }
@@ -309,27 +246,9 @@ h3 {
         top: 9.5vw;
     }
 
-
-    #kontakt .sectionwrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        background-color: #CCD1C7;
-        height: 40vw;
-        width: 100%;
-    }
-
-
     #kontakt {
         display: flex;
         flex-direction: column-reverse;
-    }
-
-    #kontakt h4 {
-        line-height: 0.3;
-        font-size: 20rem;
-        text-transform: uppercase;
-
     }
 }
 
@@ -339,13 +258,7 @@ h3 {
     align-items: center;
 }
 
-.ovre {
-    display: flex;
-    flex-wrap: wrap;
-
-
-}
-
+.ovre,
 .under {
     display: flex;
     flex-wrap: wrap;
@@ -363,8 +276,6 @@ h3 {
 }
 
 #portfolie .sectionwrapper {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 20px;
 }
@@ -382,13 +293,11 @@ h3 {
 #emne3 .sectionwrapper {
     background-color: #CFC7D1;
     text-align: center;
-
 }
 
 #emne4 .sectionwrapper {
     background-color: #D1C7C7;
     text-align: center;
-
 }
 
 .sectionwrapper .box {
@@ -396,7 +305,6 @@ h3 {
     flex-direction: column-reverse;
     height: 80vw;
     width: 80vw;
-
 }
 
 #pic1 {
@@ -419,7 +327,6 @@ h3 {
     background-size: cover;
 }
 
-
 .link {
     padding-top: 20px;
     display: flex;
@@ -427,8 +334,6 @@ h3 {
 }
 
 .link a {
-    color: black;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 1.5rem;
 }
@@ -442,39 +347,30 @@ h3 {
 
 #portfolie .overskrift {
     background-color: #FCFCF9;
-
-}
-
-#portfolie h1 {
-    font-size: 2rem;
 }
 
 .overlay2 {
-    background-color: #FCFCF9;
-    opacity: 0;
     height: 80vw;
     width: 80vw;
+    display: none;
 }
 
-
-
 @media only screen and (min-width: 600px) {
-
     #portfolie {
         flex-direction: column;
-
     }
 
+    #kontakt .box,
     #portfolie .box {
-        height: 30vw;
-        width: 30vw;
-
+        height: 25vw;
+        width: 25vw;
     }
 
     .overlay2 {
-        height: 30vw;
-        width: 30vw;
-        opacity: 0.5;
+        background-color: #FCFCF9;
+        height: 25vw;
+        width: 25vw;
+        opacity: 0.9;
         display: none;
     }
 
@@ -501,30 +397,20 @@ h3 {
 
     .link:hover {
         transform: scale(1.1);
-
-    }
-
-    #portfolie .overskrift {
-        background-color: #FCFCF9;
-        width: 20vw;
-        left: 0;
-        bottom: -8vh;
     }
 
     .ovre,
     .under {
         flex-wrap: nowrap;
     }
-
 }
-
 
 #web .sectionwrapper,
 #ux .sectionwrapper,
 #animation .sectionwrapper,
 #indhold .sectionwrapper {
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: flex-start;
 }
@@ -550,7 +436,6 @@ h3 {
 #animation h1,
 #indhold h1 {
     background-color: #FCFCF9;
-    font-size: 2rem;
 }
 
 #web .col1,
@@ -579,7 +464,6 @@ h3 {
     height: 70vw;
     width: 80vw;
 }
-
 
 #stilartssite {
     background-image: url(billeder/grundlagendeweb_pic.jpg);
@@ -621,10 +505,8 @@ h3 {
     width: 80vw;
 }
 
-
 .pil {
     display: none;
-
 }
 
 #animation .bottom {
@@ -633,13 +515,11 @@ h3 {
 
 @media only screen and (min-width: 600px) {
 
-
     #web .sectionwrapper,
     #ux .sectionwrapper,
     #animation .sectionwrapper,
     #indhold .sectionwrapper {
         justify-content: space-around;
-
     }
 
     #web .col1,
@@ -655,7 +535,6 @@ h3 {
     #indhold .col2 {
         height: 30vw;
         width: 35vw;
-
     }
 
     .col2 .top {
@@ -678,6 +557,6 @@ h3 {
         top: 15vw;
         left: 4vw;
         max-width: 5rem;
-
+        z-index: 2;
     }
 }
